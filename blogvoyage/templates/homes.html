@@ -1,0 +1,64 @@
+{% extends 'base_templates.html' %}
+
+{% load static %}
+{% block title %} page d'accueil{% endblock  %}
+
+{% block contenus %} 
+    <div class="container-fluid jumb">
+
+        <div class="jumbotron text-center">
+            <h3 class="text-weight-bold">VOYAGES</h3>
+            <p class="lead">Voyager c'est ma vie! Je vais vous faire decouvrir mes destination favorites à travers le monde!</p>
+            <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'articles' %}" role="button">Article</a>
+            </p>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <img src="{% get_media_prefix %}red_wine.jpg" alt="image du restaut"  height="250" width="100%" >
+            </div>
+            <div class="col-6">
+                <h2> Mes Aventures </h2>
+                <hr>
+                <div>
+                    Les alertes sont disponibles pour toute longueur de texte, ainsi qu'un bouton de congé optionnel. Pour un style
+                    approprié, utilisez l'une des quatre classes contextuelles requises. 
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row" >
+            <div class="col-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
+                    <i class="fas fa-hiking fa-stack-1x "></i>
+                </span>
+                <h2 class="text-center">titre info1</h2>
+                <P class="text-center">Les differents information</P>
+            </div>
+            <div class="col-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
+                    <i class="fas fa-utensils fa-stack-1x  "></i>
+                </span>
+                <h2 class="text-center">titre info2</h2>
+                <P class="text-center">Les differents information</P>
+                
+            </div>
+            <div class="col-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
+                    <i class="fas fa-route fa-stack-1x "></i>
+                </span>
+                <h2 class="text-center">titre info3</h2>
+                <P class="text-center">Les differents information</P>
+            </div>    
+        </div>
+        
+    </div>
+{% endblock  %}

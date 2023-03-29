@@ -1,0 +1,31 @@
+{% extends 'base_templates.html' %}
+{% block title %} page d'article{% endblock  %}
+
+{% block contenus %} 
+    
+    <div class="row">
+        <div class="col-10">
+            <span class="">la liste article</span>
+        </div>
+        
+        <div class="col-2">
+            <a class="btn btn-primary" type="submit" href="{% url 'creer' %}"> creer </a>
+        </div>
+    </div>
+    <div class="row">
+    </div>
+    <hr>
+    <div class="row">
+        
+        {% for tous_articles in contenu_article %}                
+            
+            <div class="col-4">
+                <h2><a href="{% url 'detail' detail=tous_articles.slug %}"> {{tous_articles.titre}} </a> </h2>
+                <img width="200px" height="200px" src="{{tous_articles.image.url }}" alt="{{tous_articles.titre}}">
+                <p> {{tous_articles.date_publication}}</p>
+                <span> {{tous_articles.contenu}}</span>
+            </div>
+        {%  endfor %}
+    </div>
+{% endblock  %}
+

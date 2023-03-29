@@ -1,0 +1,9 @@
+{% extends 'base_templates.html' %}
+{% block title %} un article{% endblock  %}
+
+{% block contenus %}
+    <h2>{{diff_article.titre }}</h2>
+    <img width="300px" height="100px" src="{{diff_article.image.url }}" alt="{{tous_articles.titre}}">
+    <p> {{diff_article.date_publication }}</p>
+    <span> {{diff_article.contenu }}</span>
+{% endblock  %}

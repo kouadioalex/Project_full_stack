@@ -1,0 +1,19 @@
+.container {
+    border: 0px solid red ;
+}
+.bd{
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+.cl{
+    color: aqua;
+    
+}
+.bak_col{
+    background-color: gray;
+}
+.font{
+
+    font-size: 50px;
+    text-align:center;
+}
